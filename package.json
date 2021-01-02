@@ -5,10 +5,11 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start":"node server.js",
     "frontend": "npm start --prefix frontend",
     "server": "nodemon server.js",
     "dev": "concurrently \"npm run server\" \"npm run frontend\"",
-    "heroku-postbuild": " npm install --prefix frontend && npm run build --prefix frontend && npm run dev"
+    "heroku-postbuild": " npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "Mizanur Rahaman",
   "license": "ISC",
