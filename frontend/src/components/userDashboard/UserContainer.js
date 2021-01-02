@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
+import PrivateRoute from '../cart/PrivateRouter';
 import ChatRoom from './chatRoom/ChatRoom';
 import CreateReview from './CreateReview/CreateReview';
 import MyCourses from './myCourses/MyCourses';
@@ -45,7 +46,7 @@ const UserContainer = () => {
                 {routes.map((route, index) => (
                     // Render more <Route>s with the same paths as
                     // above, but different components this time.
-                    <Route
+                    <PrivateRoute
                         key={index}
                         path={route.path}
                         exact={route.exact}
