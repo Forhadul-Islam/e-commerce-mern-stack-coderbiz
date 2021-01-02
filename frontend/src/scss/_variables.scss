@@ -1,0 +1,39 @@
+//colors
+$color-white: #ffffff;
+$color-black: #000000;
+$color-transparent: #ecf4f521;
+
+$color-yellow-light: #e0b945;
+$color-yellow-dark: #d4a310;
+$color-gray-light: #f3efcb;
+$color-dark-blue: #0b092bc9;
+$color-creamy-light: #fdfbef;
+
+$color-button-primary: #38355d;
+$color-button-secondary: #9e7358;
+
+//Media query break points
+
+$screen-sm-max: 596px;
+$screen-md-max: 768px;
+$screen-lg-max: 992px;
+
+//Mixin
+
+@mixin sm {
+  @media (max-width: #{$screen-sm-max}) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: #{$screen-md-max}) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: #{$screen-lg-max}) {
+    @content;
+  }
+}

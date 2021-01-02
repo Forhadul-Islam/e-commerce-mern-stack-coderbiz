@@ -1,0 +1,47 @@
+.my-courses {
+  display: grid;
+  grid-template-rows: 18rem 1fr;
+  &__title {
+    font-size: 3.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    background-color: #011b33;
+    color: wheat;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2rem;
+    margin: 2rem;
+    &--course-count {
+      font-size: 8rem;
+      margin: auto 0.5rem;
+    }
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    row-gap: 2.5rem;
+    column-gap: 2rem;
+    justify-items: center;
+    @include md {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 1rem;
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+    &--card {
+      width: 36rem;
+      &-title {
+        height: 3rem;
+        font-size: 2rem;
+        color: #c31c1c;
+      }
+      &-button {
+        font-size: 2.3rem;
+      }
+    }
+  }
+}

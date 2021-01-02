@@ -1,0 +1,28 @@
+.product-features {
+  width: 80%;
+  display: grid;
+  grid-template-rows: 5rem 1fr;
+  margin: 2rem auto;
+  text-align: justify;
+  &__title {
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: rgb(41, 40, 40);
+  }
+  &__list {
+    display: flex;
+    align-items: center;
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+    margin-left: 2rem;
+
+    &--item {
+      margin-left: 0.5rem;
+      margin-top: 1rem;
+      display: flex;
+      &-icon {
+        margin: 0 0.4rem;
+      }
+    }
+  }
+}

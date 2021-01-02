@@ -1,0 +1,116 @@
+@import "./variables";
+
+.authenticate {
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+  &__image {
+    position: relative;
+    background-image: linear-gradient(
+        to left,
+        $color-transparent -45%,
+        $color-dark-blue 42%
+      ),
+      url("../images/auth-page.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 110vh;
+    width: 100vw;
+    overflow: hidden;
+  }
+  &__options {
+    font-size: 25px;
+    color: #e9fffd;
+    display: flex;
+    margin: auto;
+    width: 50%;
+    justify-content: space-around;
+    font-weight: 700;
+    padding: 0.5rem;
+
+    &--login {
+      cursor: pointer;
+    }
+
+    &--active {
+      color: #6db4ec;
+    }
+  }
+  &__container {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translateY(-50%);
+    transform: translateX(-50%);
+    animation: form-animation 3s;
+    // border: 2px solid #ff9800;
+    border: 2px solid #e9fffd5c;
+    padding: 2rem;
+    border-radius: 0.6rem;
+    background-image: linear-gradient(to bottom, #2b2a39, #007ab71f);
+    box-shadow: 0rem 0rem 12px 1px #188ad01f;
+    &--logo {
+      height: 7rem;
+      //   margin: auto;
+      //   display: flex;
+      margin-left: 1.9rem;
+      margin-bottom: 0.8rem;
+      cursor: pointer;
+    }
+    &--form {
+      height: 43vh;
+      width: 38rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      input {
+        width: 80%;
+        height: 4rem;
+        padding: 0 1rem;
+        outline: none;
+      }
+      &-submit-button {
+        background-color: #199dd1;
+        border: none;
+        font-size: 2rem;
+        /* font-weight: 600; */
+        color: white;
+        cursor: pointer;
+        transition: 0.4s;
+        border-radius: 5rem;
+        width: 28rem;
+        padding: 0.5rem 1rem;
+        &:hover {
+          background-color: #006c8d;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+  }
+}
+
+.login-form {
+  max-width: 300px;
+}
+.login-form-forgot {
+  float: right;
+}
+.ant-col-rtl .login-form-forgot {
+  float: left;
+}
+.login-form-button {
+  width: 100%;
+}
+
+@keyframes form-animation {
+  to {
+    opacity: 1;
+  }
+  from {
+    opacity: 0;
+  }
+}

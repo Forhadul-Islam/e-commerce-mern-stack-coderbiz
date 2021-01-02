@@ -1,0 +1,42 @@
+.profile {
+  display: grid;
+  grid-template-rows: 1fr 3fr;
+  box-shadow: 0px 0px 8px 0px #cabfbf;
+    margin: 3rem;
+  &__top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &--image {
+      height: 12rem;
+      animation: imageAnimation 1s infinite ease-in alternate-reverse;
+    }
+  }
+  &__description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+    &--item {
+      font-size: 2rem;
+      margin: 0.7rem 0rem;
+      &-edit {
+        font-size: 3rem;
+        color: #1d6eae;
+        cursor: pointer;
+        &:hover {
+          transform: scale(0.9);
+        }
+      }
+    }
+  }
+}
+
+@keyframes imageAnimation {
+  to {
+    transform: scale(0.9);
+  }
+  from {
+    transform: scale(1);
+  }
+}

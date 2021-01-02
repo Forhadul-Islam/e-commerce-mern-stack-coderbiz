@@ -1,0 +1,19 @@
+.notice-board {
+    &__heading {
+        font-size: 2.6rem;
+        color: #b617c8;
+        &strong {
+            color: #7b2ec7;
+        }
+
+    }
+    &__body {
+        font-size: 2rem;
+        width: 75%;
+        background-color: #e7e7e7;
+        padding: 2rem;
+        border-radius: 1rem;
+        color: #077e7f;
+        font-family: sans-serif;
+    }
+}

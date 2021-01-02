@@ -1,0 +1,121 @@
+@import "./variables";
+
+.course-item {
+  display: grid;
+  grid-template-rows: 3fr 3.5fr 0.5fr;
+  overflow: hidden;
+  max-width: 35rem;
+  min-height: 39rem;
+  margin-top: 3rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  //   box-shadow: 0 0.3rem 0.8rem #b1b3b3;
+  //   border-radius: 0.6rem;
+  border: 3px solid rgb(206, 220, 224);
+  transition: all 0.4s;
+
+  &:hover {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 0.5rem 2rem #b1b3b3;
+  }
+  &__image {
+    width: 100%;
+  }
+  &__content {
+    display: grid;
+    grid-template-rows: 1.1fr 1.3fr 0.8fr;
+    padding: 0.4rem;
+    &--title {
+      font-size: 1.9rem;
+      display: -webkit-box;
+      font-weight: 600;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      border-bottom: 1px solid rgba($color-dark-blue, 0.2);
+      color: rgba($color-dark-blue, 0.9);
+      transition: all 0.4s;
+      cursor: pointer;
+      padding-top: 0.5rem;
+      &:hover {
+        color: #ed5c07;
+      }
+    }
+    &--description {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font-size: 1.6rem;
+      padding: 0.5rem 0;
+      color: rgba($color-dark-blue, 0.7);
+      &::-webkit-scrollbar {
+        background-color: rgba($color-dark-blue, 0.5);
+        width: 0.3rem;
+      }
+    }
+    &--sale {
+      display: flex;
+      justify-content: space-evenly;
+      width: 80%;
+      margin-left: auto;
+      align-items: center;
+      &-tag {
+        font-size: 2rem;
+        color: rgb(49, 172, 177);
+      }
+      &-previous {
+        font-size: 2.5rem;
+        text-decoration: line-through;
+        color: #7f7f80;
+        font-family: inherit;
+      }
+      &-current {
+        font-size: 3rem;
+        color: #008fcf;
+        font-family: inherit;
+      }
+    }
+    &--price {
+      font-size: 2.3rem;
+      color: #0786cfeb;
+      text-align: right;
+      margin-right: 3rem;
+      font-weight: 700;
+    }
+  }
+  &__button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    text-align: center;
+    width: 100%;
+    background-color: rgba($color-yellow-dark, 0.9);
+    color: white;
+    font-weight: 600;
+    transition: all 0.5s;
+    height: 3.5rem;
+    font-size: 1.5rem;
+    &:active {
+      font-size: 1rem;
+    }
+    &:hover {
+      background-color: rgba($color-yellow-dark, 0.7);
+      border: 1px solid gray;
+      color: #444343;
+    }
+  }
+}
+
+@keyframes course-item-animation {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(0.8rem);
+  }
+}

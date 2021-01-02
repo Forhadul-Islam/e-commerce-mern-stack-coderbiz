@@ -1,0 +1,35 @@
+@import "./reset";
+@import "~antd/dist/antd.css";
+@import "./cta-top";
+@import "./variables";
+@import "./header";
+@import "./courses";
+@import "./course-item";
+@import "./review";
+@import "./partner";
+@import "./authenticate";
+@import "./product-cta";
+@import "./product-features";
+@import "./alert";
+@import "./header-menu";
+@import "./cart";
+@import "./payment";
+@import "./payment-success";
+@import "./admin-dashboard-template";
+@import "./dashboard";
+@import "./product-management";
+@import "./product-form";
+@import "./new-product";
+@import "./deleteProduct";
+@import "./customers";
+@import "./update-product";
+@import "./course-item-card";
+@import "./user-dashboard-my-courses";
+@import "./user-dashboard-profile";
+@import "./user-dashboard-notice";
+
+.ant-breadcrumb {
+  font-size: 2rem;
+  margin: 16px 0px;
+  color: lightcoral;
+}

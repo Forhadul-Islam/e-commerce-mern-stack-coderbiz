@@ -1,0 +1,147 @@
+@import "./variables";
+
+.review {
+  display: grid;
+  grid-template-rows: 5fr 20fr 5fr;
+  width: 75vw;
+  margin: 10rem auto 0;
+  background-color: #f5f4f4de;
+  padding: 2rem;
+  @include md {
+    width: 100vw;
+    padding: 1rem;
+    grid-template-rows: 2fr 20fr 2fr;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    color: #c0a051;
+    text-align: center;
+    @include sm {
+      font-size: 3rem;
+    }
+  }
+  &__center {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    @include md {
+      grid-template-columns: 1fr;
+      row-gap: 1rem;
+      max-width: 90%;
+    }
+    &--review-item {
+      max-width: 30rem;
+      background-color: #ffffff;
+      display: grid;
+      grid-template-rows: 3fr 1fr 5fr;
+      column-gap: 2rem;
+      row-gap: 2rem;
+      text-align: center;
+      text-align: -webkit-center;
+      border: 2px solid #ecd9a1;
+      margin: 0 2rem;
+      padding: 0.5rem;
+      box-shadow: 0.5px 0.2rem 0.5rem #dbdbdb;
+      border-radius: 0.8rem;
+      @include md {
+        max-width: 50rem;
+      }
+      @include sm {
+        max-width: 35rem;
+        object-fit: contain;
+      }
+      &-name {
+        font-size: 2.6rem;
+        font-family: cursive;
+      }
+      &-image {
+        height: 10rem;
+        width: 10rem;
+        object-fit: contain;
+        border-radius: 50%;
+        top: 4px;
+        border: 2px solid moccasin;
+      }
+      &-description {
+        font-size: 1.7rem;
+        text-align: revert;
+        padding: 0.5rem;
+        line-height: 1.3;
+        color: #5d5555;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        display: -webkit-box;
+        &::-webkit-scrollbar {
+          background-color: #f5e9ec;
+          width: 0.3rem;
+        }
+      }
+    }
+  }
+  &__bottom {
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    &--arrow {
+      background-color: white;
+      height: 4.5rem;
+      width: 4.5rem;
+      margin: 1rem;
+      border-radius: 5rem;
+      box-shadow: 0 0.2rem 0.4rem lightgrey;
+      color: #e6c254;
+      border: 1px solid #d8ac27;
+      cursor: pointer;
+      transition: all 0.2s;
+      &:hover {
+        color: #d27b22;
+        border: 1px solid #79d9d985;
+        padding: 0.3rem;
+      }
+      &:active {
+        outline: none;
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+  }
+
+  &__slider--animation-slideOut {
+    animation: slideOut;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+  &__slider--animation-slideIn {
+    animation: slideIn;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+  }
+}
+
+@keyframes slideOut {
+  to {
+    opacity: 1;
+    transform: translateX(-4rem);
+  }
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+}
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(4rem);
+  }
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+}

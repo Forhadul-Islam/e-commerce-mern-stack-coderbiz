@@ -1,0 +1,34 @@
+@import "./variables";
+
+.courses {
+  &__title {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    font-size: 3.5rem;
+    color: rgba($color-dark-blue, 0.9);
+    padding: 0.5rem;
+    &--underline {
+      width: 70vw;
+      background-color: rgba($color-dark-blue, 0.4);
+      height: 0.1rem;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__container {
+    width: 90%;
+    margin: 1.2rem auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    @include md {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+}

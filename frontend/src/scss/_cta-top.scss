@@ -1,0 +1,113 @@
+@import "./variables";
+
+.cta-top {
+  position: relative;
+  margin-top: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &__img {
+    display: flex;
+    width: 90%;
+    height: 52rem;
+    background-image: linear-gradient(
+        to left,
+        $color-transparent 15%,
+        $color-dark-blue 42%
+      ),
+      url("../images/work3.jpg");
+    background-size: cover;
+
+    @include md {
+      width: 100%;
+      background-image: linear-gradient(
+          to left,
+          $color-transparent -3%,
+          $color-dark-blue 38%
+        ),
+        url("../images/work3.jpg");
+    }
+    @include sm {
+      width: 100%;
+      background-image: linear-gradient(
+          to left,
+          $color-transparent -60%,
+          $color-dark-blue 38%
+        ),
+        url("../images/work3.jpg");
+    }
+  }
+
+  &__textbox {
+    position: absolute;
+    left: 8%;
+    min-height: 25rem;
+    width: 45%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    align-items: center;
+
+    @include md {
+      width: 60%;
+      left: 10%;
+      max-height: 50rem;
+    }
+    @include sm {
+      width: 98%;
+      left: auto;
+      max-height: 50rem;
+      padding: 2rem;
+    }
+
+    &--headline {
+      font-size: 3.5rem;
+      color: $color-yellow-light;
+      animation: textbox-animation;
+      animation-duration: 7s;
+    }
+
+    &--story {
+      font-size: 1.8rem;
+      color: $color-creamy-light;
+      animation: textbox-animation;
+      animation-duration: 5s;
+    }
+
+    &--button {
+      max-width: 38rem;
+      border-radius: 20rem;
+      height: 4rem;
+      outline: none;
+      border: none;
+      cursor: pointer;
+      background-color: $color-yellow-light;
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: $color-dark-blue;
+      transition: all 0.6s;
+      animation: textbox-animation;
+      animation-duration: 2s;
+
+      @include sm {
+        font-size: 1.4rem;
+      }
+
+      &:hover {
+        background-color: $color-yellow-dark;
+        color: $color-creamy-light;
+      }
+    }
+  }
+}
+
+@keyframes textbox-animation {
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+}

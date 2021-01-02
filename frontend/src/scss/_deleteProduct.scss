@@ -1,0 +1,36 @@
+.delete {
+  height: 60rem;
+  &-modal {
+    height: 20rem;
+    display: grid;
+    grid-template-rows: 1fr 2.4fr 8rem;
+    /* justify-content: center; */
+    align-items: center;
+    &--title {
+      font-size: 3rem;
+      color: #e0630f;
+      margin: 0 2rem;
+      font-weight: 600;
+    }
+    &--body {
+      font-size: 1.8rem;
+      padding: 2rem;
+      color: #48484e;
+    }
+    &--action {
+      font-size: 1.8rem;
+      padding: 2rem;
+      color: #48484e;
+      display: flex;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 13rem;
+    }
+  }
+}
+
+.modal-content {
+  border: 2px solid #414243;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
