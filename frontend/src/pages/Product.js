@@ -6,12 +6,13 @@ import ProductFeature from '../components/productCta/ProductFeature';
 import ProductFixed from '../components/productCta/ProductFixed';
 import { addToCartAction } from '../redux/actions/cartActions';
 import { loadSingleProduct } from '../redux/actions/productActions';
+import Loading from '../util/Loading';
 
 
 const Product = () => {
     const {courseId} = useParams()
     const dispatch = useDispatch();
-    const {singleProduct} = useSelector(state => state.productReducer)
+    const {singleProduct, isLoading} = useSelector(state => state.productReducer)
     const {cart} = useSelector(state => state.cartReducer)
     const item = {
         id: courseId,
@@ -32,19 +33,20 @@ const Product = () => {
     return (
         <>
         {
-            singleProduct && <div className="product">
-            <ProductCta 
-                title={singleProduct?.title}
-                description={singleProduct?.description}
-            />
-            <ProductFeature features ={singleProduct?.features} />
-            <ProductFixed
-                addToCart={addToCart}
-                image={singleProduct?.image}
-                price={singleProduct?.price}
-                sale={singleProduct?.sale}
-            />
+            !isLoading ? <div className="product">
+                <ProductCta 
+                    title={singleProduct?.title}
+                    description={singleProduct?.description}
+                />
+                <ProductFeature features ={singleProduct?.features} />
+                <ProductFixed
+                    addToCart={addToCart}
+                    image={singleProduct?.image}
+                    price={singleProduct?.price}
+                    sale={singleProduct?.sale}
+                />
         </div>
+        : <Loading />
         }
         </>
     )

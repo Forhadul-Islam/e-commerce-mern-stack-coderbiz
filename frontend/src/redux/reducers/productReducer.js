@@ -20,7 +20,8 @@ const productReducer = (state = INITIAL_STATE, action) =>{
         case LOAD_SINGLE_PRODUCT: 
             return {
                 ...state,
-                singleProduct: payload
+                singleProduct: payload,
+                isLoading: false
             }
     
         default:

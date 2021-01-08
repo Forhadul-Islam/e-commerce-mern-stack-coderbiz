@@ -1,0 +1,21 @@
+.footer {
+    min-height: 40rem;
+    background-color:#272727;
+    display: grid;
+    color: white;
+    &__container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 2rem;
+        justify-items: center;
+    &--item {
+        padding-left: 2rem;
+        padding-top: 3rem;
+        &-text {
+            font-size: 1.5rem;
+            list-style: none;
+        }
+    }
+    }
+
+}

@@ -14,7 +14,7 @@ const Header = () => {
         <CheckUser />
         <div className="header">
             <HeaderLeft />
-            <HeaderCenter />
+            {/* <HeaderCenter /> */}
 
             {user.email ? <HeaderMenu /> : <HeaderRight />  }
             

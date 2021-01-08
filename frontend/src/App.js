@@ -8,6 +8,7 @@ import {
 } from "react-router-dom";
 import ProtectedAdminRoute from './components/adminDashboard/ProtectedAdminRoute';
 import PrivateRoute from './components/cart/PrivateRouter';
+import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import AdminDashboard from './pages/AdminDashboard';
 import Auth from './pages/Auth';
@@ -36,6 +37,7 @@ function App() {
                 <Route exact path="/">
                   <Header />
                   <Landing />
+                  <Footer />
                 </Route>
                 <Route exact path="/auth">
                   <Auth />
@@ -43,26 +45,25 @@ function App() {
                 <Route exact path="/courses/:courseId" exact >
                   <Header />
                   <Product />
+                  <Footer />
                 </Route>
                 <Route exact path="/cart" exact >
                   <ShoppingCart />
+                  <Footer />
                 </Route>
                 <PrivateRoute path="/checkout" exact >
                   <Header />
                   <Elements stripe={promise}>
                     <Checkout />
+                    <Footer />
                   </Elements>
                 </PrivateRoute>
                 <PrivateRoute path = "/payment-success" exact >
-                  {/* <Header /> */}
                   <PaymentSuccess />
                 </PrivateRoute>
-                
-                {/* <PrivateRoute path = "/admin"> */}
                   <ProtectedAdminRoute path='/admin' >
                     <AdminDashboard />
                   </ProtectedAdminRoute>
-                {/* </PrivateRoute> */}
                 <Route path="/my-account">
                   <UserDashboard />
                 </Route>
