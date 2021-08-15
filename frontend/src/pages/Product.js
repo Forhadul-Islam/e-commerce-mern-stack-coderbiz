@@ -13,7 +13,8 @@ const Product = () => {
     const {courseId} = useParams()
     const dispatch = useDispatch();
     const {singleProduct, isLoading} = useSelector(state => state.productReducer)
-    const {cart} = useSelector(state => state.cartReducer)
+    const {cart} = useSelector(state => state.cartReducer);
+    console.log(isLoading)
     const item = {
         id: courseId,
         title:singleProduct.title, 
@@ -26,10 +27,10 @@ const Product = () => {
         dispatch(addToCartAction(cart, item))
     }
     
-    useEffect(async ()=>{
+    useEffect( ()=>{
         dispatch(loadSingleProduct(courseId));
 
-    }, [])
+    }, [dispatch, courseId])
     return (
         <>
         {

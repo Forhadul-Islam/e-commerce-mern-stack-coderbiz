@@ -1,10 +1,8 @@
 import {
-    DesktopOutlined,
-    FileOutlined,
-    FundOutlined,
-    PieChartOutlined,
-    PlusSquareOutlined,
-    TeamOutlined
+  FundOutlined,
+  PieChartOutlined,
+  PlusSquareOutlined,
+  TeamOutlined
 } from '@ant-design/icons';
 import { Breadcrumb, Layout, Menu } from 'antd';
 import React, { useEffect, useState } from 'react';
@@ -72,19 +70,19 @@ const UserDashboardTemplate = () => {
             <Menu.Item onClick={routeUserNoticeBoard} key="3" icon={<PlusSquareOutlined />}>
               Notice Board
             </Menu.Item>
-            <Menu.Item onClick={routeUserReviews} key="4" icon={<PlusSquareOutlined />}>
+            {/* <Menu.Item onClick={routeUserReviews} key="4" icon={<PlusSquareOutlined />}>
               Review CoderBiz
-            </Menu.Item>
-            <Menu.Item onClick={routeUserChatRoom} key="5" icon={<DesktopOutlined />}>
+            </Menu.Item> */}
+            {/* <Menu.Item onClick={routeUserChatRoom} key="5" icon={<DesktopOutlined />}>
               Chat Room
-            </Menu.Item>
+            </Menu.Item> */}
             <SubMenu key="sub2" icon={<TeamOutlined />} title="Chat Room">
               <Menu.Item key="6">Team Management</Menu.Item>
               <Menu.Item key="8">Team Instructor</Menu.Item>
             </SubMenu>
-            <Menu.Item key="9" icon={<FileOutlined />}>
+            {/* <Menu.Item key="9" icon={<FileOutlined />}>
               Files
-            </Menu.Item>
+            </Menu.Item> */}
           </Menu>
         </Sider>
         <Layout className="site-layout">

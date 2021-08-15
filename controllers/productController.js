@@ -5,7 +5,7 @@ const { verifyUser } = require('./authController');
 exports.getAllProducts = async (req, res, next) =>{
     try {
         const courses = await Course.find({});
-       await res.status(200).json(courses);
+        res.status(200).json(courses);
         
     } catch (err) {
         console.log(err)
@@ -55,8 +55,10 @@ exports.updateProductById = async (req, res, next) =>{
 
 exports.removeSingleProduct = async (req, res, next) =>{
     try {
+
         const id = req.params.id
-        const response = await Course.findByIdAndDelete({_id: id})
+        const response = await Course.findByIdAndDelete(id);
+        console.log(id, response)
         res.status(200).json(response ? 'Product Deleted Successfully': "sorry the product not exists")
     } catch (err) {
         console.log(err)

@@ -23,8 +23,8 @@ const CourseItemCard = ({ id, title, image, description, price, sale}) => {
     }
 
     const handleViewProduct = () => {
-        history.push(`/courses/${id}`)
         dispatch(loadSingleProduct(id))
+        history.push(`/courses/${id}`)
         
     }
 
@@ -59,9 +59,6 @@ const CourseItemCard = ({ id, title, image, description, price, sale}) => {
                         <Price />
                 </Card.Text>
                 }
-                {/* <Card.Body className="card__price" text="secondary">
-                    <Price />
-                </Card.Body> */}
                 <Card.Body className="card__button">
                 <Button 
                 onClick={addToCart}

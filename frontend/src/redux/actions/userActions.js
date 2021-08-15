@@ -14,9 +14,9 @@ export const signupAction = (username, phone, email, password) => async(dispatch
     const url = '/auth/signup'
     try{
         const res = await API.post(url, body, options);
-        dispatch({type: GET_USER, payload: res.data.user})
+        dispatch({type: GET_USER, payload: res?.data?.user})
     }catch(err){
-        dispatch(setAlert(err.response.data.message))
+        dispatch(setAlert(err.response?.data?.message))
         
     }
 }
@@ -31,9 +31,9 @@ export const loginAction = (email, password) => async(dispatch) =>{
     try{
         const res = await API.post(url, body, options);
         localStorage.setItem('JWT_TOKEN',JSON.stringify (res.data.token));
-        dispatch({type: GET_USER, payload: res.data.user});
+        dispatch({type: GET_USER, payload: res?.data.user});
     }catch(err) {
-        dispatch(setAlert(err.response.data.message))
+        dispatch(setAlert(err.response?.data?.message))
     }
 }
 

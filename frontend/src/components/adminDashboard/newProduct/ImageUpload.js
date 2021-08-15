@@ -77,6 +77,7 @@ class AliyunOSSUpload extends React.Component {
     const filename = Date.now() + suffix;
     file.url = OSSData.dir + filename;
 
+    console.log(OSSData)
     return file;
   };
 
@@ -91,6 +92,7 @@ class AliyunOSSUpload extends React.Component {
       data: this.getExtraData,
       beforeUpload: this.beforeUpload,
     };
+    
     return (
       <Upload {...props}>
         <Button icon={<UploadOutlined />}>Click to Upload</Button>

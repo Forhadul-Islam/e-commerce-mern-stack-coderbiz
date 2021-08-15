@@ -1,9 +1,9 @@
+import { Button } from 'antd';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { loginAction, signupAction } from '../../redux/actions/userActions';
-
 
 
 const AuthenticationForm = ({formOptions}) => {
@@ -89,6 +89,23 @@ const AuthenticationForm = ({formOptions}) => {
              >Submit</button>
             </form>
             }
+            <Button 
+            onClick={()=>{
+                setEmail("admin2@gmail.com"); 
+                setPassword("password")
+                }} 
+            type="dashed"
+            >Login as Admin
+            </Button>
+            <Button 
+            style={{marginRight: "2px"}}
+            onClick={()=>{
+                setEmail("mizann@gmail.com"); 
+                setPassword("password")
+                }} 
+            type="dashed"
+            >Login as User
+            </Button>
         </>
     )
 }

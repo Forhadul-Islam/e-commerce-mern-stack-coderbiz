@@ -42,12 +42,12 @@ function App() {
                 <Route exact path="/auth">
                   <Auth />
                 </Route>
-                <Route exact path="/courses/:courseId" exact >
+                <Route exact path="/courses/:courseId" >
                   <Header />
                   <Product />
                   <Footer />
                 </Route>
-                <Route exact path="/cart" exact >
+                <Route exact path="/cart" >
                   <ShoppingCart />
                   <Footer />
                 </Route>
@@ -55,7 +55,6 @@ function App() {
                   <Header />
                   <Elements stripe={promise}>
                     <Checkout />
-                    <Footer />
                   </Elements>
                 </PrivateRoute>
                 <PrivateRoute path = "/payment-success" exact >

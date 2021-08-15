@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Switch } from 'react-router-dom';
+import { Switch } from 'react-router-dom';
 import PrivateRoute from '../cart/PrivateRouter';
 import ChatRoom from './chatRoom/ChatRoom';
 import CreateReview from './CreateReview/CreateReview';

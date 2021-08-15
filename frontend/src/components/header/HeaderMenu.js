@@ -40,9 +40,9 @@ const HeaderMenu = () => {
                         My Account
                     </div>
                }
-                <div className="header-menu__large--item">
+                {/* <div className="header-menu__large--item">
                     Courses
-                </div>
+                </div> */}
                 <div 
                 onClick={()=>logout()} 
                 className="

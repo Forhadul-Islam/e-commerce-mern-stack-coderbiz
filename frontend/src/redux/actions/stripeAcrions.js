@@ -16,7 +16,7 @@ export const singlePayment = (cart, total, token, cartName, phone, email, setPro
         }
         const url = '/stripe/singlePayment';
         const res = await API.post(url, body, options);
-        if(res.status == 200){
+        if(res.status === 200){
             setProcessing(false);
             localStorage.removeItem('cartPayload')
             dispatch({type: COMPLETE_PAYMENT})

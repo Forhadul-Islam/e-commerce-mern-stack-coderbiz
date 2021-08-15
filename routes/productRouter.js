@@ -13,10 +13,11 @@ productRouter.route('/')
 
 
 
-productRouter.route('/:id').get(productController.getProductById)
-productRouter.route('/:id').put(verifyAdmin, productController.updateProductById)
-productRouter.route('/:id').delete(verifyAdmin, productController.removeSingleProduct)
-    
+productRouter.route('/:id')
+    .get(productController.getProductById)
+    .put(verifyAdmin, productController.updateProductById)
+    .delete(verifyAdmin, productController.removeSingleProduct)
+        
 
 
 module.exports = productRouter;

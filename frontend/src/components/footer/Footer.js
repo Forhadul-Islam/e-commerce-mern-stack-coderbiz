@@ -1,38 +1,40 @@
-import { Button } from 'antd'
-import React from 'react'
+import React from 'react';
+import logo from '../../images/logo-white.png';
+import './Footer.css';
 
 const Footer = () => {
     return (
-        <div className="footer">
-            <div className="footer__container">
-                <div className="footer__container--item">
-                    <li className="footer__container--item-text">About us</li>
-                    <li className="footer__container--item-text">Your Opportunities</li>
-                    <li className="footer__container--item-text">Tours</li>
-                    <li className="footer__container--item-text">Investor Relations</li>
-                    <li className="footer__container--item-text">Blog</li>
+        <div className="footerArea">
+            <div style={{ margin: "0" }} className="row element imgArea">
+                <div className="col-md-6"> <img src={logo} alt="" /> </div>
+                <div className="col-md-3 supportLink">
+                    {/* <ul>
+                        <li>About online food</li>
+                        <li>Read our blog</li>
+                        <li>Sign up to deliver</li>
+                        <li>Add your restaurant</li>
+                    </ul> */}
                 </div>
-                <div className="footer__container--item">
-                    <li className="footer__container--item-text">Popularised inpsum passages, and more recently with desktop publishing softwa.</li>
-                    <li className="footer__container--item-text">The popularised em Ipsum passages, and more recently with desing softwa.</li>
-                    <li className="footer__container--item-text">It was populariseorem Ipsum passages, and more recently witsoftwa.</li>
-                    <li className="footer__container--item-text">It was popularised itly with desktop publishing softwa.</li>
-                    <li className="footer__container--item-text">It was Letraset and more recently with desktop publishing softwa.</li>
-                    <li className="footer__container--item-text">It was populariseorem Ipsum passages, and more recently witsoftwa.</li>
-                    <li className="footer__container--item-text">It was popularised itly with desktop publishing softwa.</li>
-                  </div>
-                <div className="footer__container--item">
-                    <li className="footer__container--item-text">It was popularisedly with desktop publishing softwa.</li>
-                    <li className="footer__container--item-text">It was popularised em Ipsum passages, cently with desing softwa.</li>
-                    <li className="footer__container--item-text">It was populariseorem Ipsum passages, and more recently witsoftwa.</li>
-                    <li className="footer__container--item-text">It was popularised itly with desktop publishing softwa.</li>
-                    <li className="footer__container--item-text">It was Letraset and more recently with desktop publishing softwa.</li>
-                    <li className="footer__container--item-text">It was populariseorem Ipsum passages, and more recently witsoftwa.</li>
-                    <li className="footer__container--item-text">It was popularised itly with desktop publishing softwa.</li>
+                <div className="col-md-3 supportLink">
+                    {/* <ul>
+                        <li>About online food</li>
+                        <li>Read our blog</li>
+                        <li>Sign up to deliver</li>
+                        <li>Add your restaurant</li>
+                    </ul> */}
+                </div>
+
+            </div>
+            <div>
+                <div className="row copyrightBar">
+                    <col-md-6><p className="copyright">copyright © 2020 online food</p></col-md-6>
+                    <col-md-2><p className="copyright">privacy policy</p></col-md-2>
+                    <col-md-2><p className="copyright">Terms of Use</p></col-md-2>
+                    <col-md-2><p className="copyright">Pricing</p></col-md-2>
                 </div>
             </div>
-        </div>
-    )
-}
 
-export default Footer
+        </div>
+    );
+};
+export default Footer;
